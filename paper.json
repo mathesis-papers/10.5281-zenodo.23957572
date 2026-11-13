@@ -1,0 +1,62 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 102897,
+      "matches_public": null,
+      "path": "paper.pdf",
+      "public_sha256": null,
+      "sha256": "ca782a8ae13d0ed127005ac496b1ea27e9d89b8e5272471597ab9a30d0f95ff7"
+    },
+    "source": {
+      "bytes": 18925,
+      "matches_public": null,
+      "path": "manuscript/",
+      "public_sha256": null,
+      "sha256": "82a80ae1f631b524c826460904f6274a15763516fc59277dea73f95c1234bf2e"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Question 31 (section 2.2.5, page 24, arXiv:2610.22248v1) of Kaygorodov–Martín González–Viruel has a negative answer in its algebraic-group and group-scheme formulations: no finite-dimensional complex evolution algebra has full automorphism group SL_n for n=3 or n>=5. We prove Conjecture 5 and answer the semisimple clause of Question 36: the possible semisimple derivation algebras are exactly finite sums of so_m, m>=3. For zero-annihilator algebras, the same restriction holds for the semisimple quotient of the derivation algebra, settling the simple-ideal issue in the comment following Conjecture 5. We distinguish simple ideals from special-linear subalgebras. The abstract-group clause of Question 31 remains outside these conclusions.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": "10.5281/zenodo.23957572",
+    "current_version": 2,
+    "doi": "10.5281/zenodo.23957573",
+    "lean_source": {
+      "revision": "da4f665789a4b88cdf9eda07a8454fc517979ba5",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/da4f665789a4b88cdf9eda07a8454fc517979ba5/D5/S3/QuadraticForms/EvolutionAlgebras/AlgebraicGroupRealizationRefutation.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "url": "/api/v1/collected-papers/kmvq31-sl3-obstruction/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-05T08:03:41.969557406Z",
+    "record": "kmvq31-sl3-obstruction",
+    "repository_name": "6aec385d127fecfd3d2bfbf4",
+    "source": {
+      "url": "/api/v1/collected-papers/kmvq31-sl3-obstruction/files/source?version=2"
+    },
+    "title": "A negative answer to Question 31 (section 2.2.5, page 24, arXiv:2610.22248v1): special linear obstructions for evolution algebras",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-05T08:03:41.969557406Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "kmvq31-sl3-obstruction"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "kmvq31-sl3-obstruction",
+  "revision": 2,
+  "problem_ids": [
+    "kmvq31",
+    "kaygorodov-martin-gonzalez-viruel-2026-evolution-algebra-derivations-conjecture-5",
+    "kaygorodov-martin-gonzalez-viruel-2026-finite-aut-infinite-natural-bases"
+  ],
+  "topic": "Question 31, section 2.2.5, page 24, of arXiv:2610.22248v1: special linear obstructions to evolution-algebra automorphism realization",
+  "title": "A negative answer to Question 31 (section 2.2.5, page 24, arXiv:2610.22248v1): special linear obstructions for evolution algebras",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Question 31 (section 2.2.5, page 24, arXiv:2610.22248v1) of Kaygorodov–Martín González–Viruel has a negative answer in its algebraic-group and group-scheme formulations: no finite-dimensional complex evolution algebra has full automorphism group SL_n for n=3 or n>=5. We prove Conjecture 5 and answer the semisimple clause of Question 36: the possible semisimple derivation algebras are exactly finite sums of so_m, m>=3. For zero-annihilator algebras, the same restriction holds for the semisimple quotient of the derivation algebra, settling the simple-ideal issue in the comment following Conjecture 5. We distinguish simple ideals from special-linear subalgebras. The abstract-group clause of Question 31 remains outside these conclusions.",
+  "summary": "The written proofs classify semisimple derivation algebras and, for zero-annihilator evolution algebras over algebraically closed characteristic-zero fields, their semisimple quotients. They exclude full SL_n automorphism groups for n=3 or n>=5, distinguish ideals from faithful actions, give orthogonal group-scheme examples for diagonal forms, and apply characteristic-zero smoothness. Pinned Lean declarations cover the SL3 full-functor obstruction, its SL3 tangent bridge, the semisimple classification and the nonzero-square consequence. The semisimple-quotient and higher-n results are written proofs. Exact rational finite checks illustrate these statements.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/da4f665789a4b88cdf9eda07a8454fc517979ba5/D5/S3/QuadraticForms/EvolutionAlgebras/AlgebraicGroupRealizationRefutation.lean"
+}

@@ -1,0 +1,137 @@
+{
+  "dimension_obstruction": {
+    "factor_dimensions_at_most_eight": [
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        6
+      ]
+    ],
+    "reachable_dimensions_at_most_eight": [
+      0,
+      3,
+      6
+    ]
+  },
+  "orthogonal_examples": [
+    {
+      "derivation_dimension": 0,
+      "m": 1
+    },
+    {
+      "derivation_dimension": 1,
+      "m": 2
+    },
+    {
+      "derivation_dimension": 3,
+      "m": 3
+    },
+    {
+      "derivation_dimension": 6,
+      "m": 4
+    },
+    {
+      "derivation_dimension": 10,
+      "m": 5
+    },
+    {
+      "derivation_dimension": 15,
+      "m": 6
+    },
+    {
+      "derivation_dimension": 21,
+      "m": 7
+    }
+  ],
+  "scope": "Exact rational finite checks; the general statements have written proofs in note.tex.",
+  "sl3": {
+    "determinant": -5038848,
+    "dimension": 8,
+    "killing_matrix": [
+      [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12,
+        -6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -6,
+        12
+      ]
+    ]
+  },
+  "status": "ALL_CHECKS_OK"
+}

@@ -1,0 +1,172 @@
+{
+  "diagonal_forms": [
+    {
+      "derivation_dimension": 0,
+      "dimension": 1,
+      "negative_squares": 0
+    },
+    {
+      "derivation_dimension": 0,
+      "dimension": 1,
+      "negative_squares": 1
+    },
+    {
+      "derivation_dimension": 1,
+      "dimension": 2,
+      "negative_squares": 0
+    },
+    {
+      "derivation_dimension": 1,
+      "dimension": 2,
+      "negative_squares": 1
+    },
+    {
+      "derivation_dimension": 1,
+      "dimension": 2,
+      "negative_squares": 2
+    },
+    {
+      "derivation_dimension": 3,
+      "dimension": 3,
+      "negative_squares": 0
+    },
+    {
+      "derivation_dimension": 3,
+      "dimension": 3,
+      "negative_squares": 1
+    },
+    {
+      "derivation_dimension": 3,
+      "dimension": 3,
+      "negative_squares": 2
+    },
+    {
+      "derivation_dimension": 3,
+      "dimension": 3,
+      "negative_squares": 3
+    },
+    {
+      "derivation_dimension": 6,
+      "dimension": 4,
+      "negative_squares": 0
+    },
+    {
+      "derivation_dimension": 6,
+      "dimension": 4,
+      "negative_squares": 1
+    },
+    {
+      "derivation_dimension": 6,
+      "dimension": 4,
+      "negative_squares": 2
+    },
+    {
+      "derivation_dimension": 6,
+      "dimension": 4,
+      "negative_squares": 3
+    },
+    {
+      "derivation_dimension": 6,
+      "dimension": 4,
+      "negative_squares": 4
+    },
+    {
+      "derivation_dimension": 10,
+      "dimension": 5,
+      "negative_squares": 0
+    },
+    {
+      "derivation_dimension": 10,
+      "dimension": 5,
+      "negative_squares": 1
+    },
+    {
+      "derivation_dimension": 10,
+      "dimension": 5,
+      "negative_squares": 2
+    },
+    {
+      "derivation_dimension": 10,
+      "dimension": 5,
+      "negative_squares": 3
+    },
+    {
+      "derivation_dimension": 10,
+      "dimension": 5,
+      "negative_squares": 4
+    },
+    {
+      "derivation_dimension": 10,
+      "dimension": 5,
+      "negative_squares": 5
+    },
+    {
+      "derivation_dimension": 15,
+      "dimension": 6,
+      "negative_squares": 0
+    },
+    {
+      "derivation_dimension": 15,
+      "dimension": 6,
+      "negative_squares": 1
+    },
+    {
+      "derivation_dimension": 15,
+      "dimension": 6,
+      "negative_squares": 2
+    },
+    {
+      "derivation_dimension": 15,
+      "dimension": 6,
+      "negative_squares": 3
+    },
+    {
+      "derivation_dimension": 15,
+      "dimension": 6,
+      "negative_squares": 4
+    },
+    {
+      "derivation_dimension": 15,
+      "dimension": 6,
+      "negative_squares": 5
+    },
+    {
+      "derivation_dimension": 15,
+      "dimension": 6,
+      "negative_squares": 6
+    }
+  ],
+  "natural_basis_separation": {
+    "full_automorphism_count_in_written_proof": 2,
+    "ordered_parameter_pairs": 625,
+    "parameter_max": 25,
+    "parameter_min": 1
+  },
+  "rank_dimension": {
+    "rank_and_dimension_matches": [
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        6
+      ]
+    ],
+    "special_linear_n_max": 100,
+    "special_linear_n_min": 2
+  },
+  "scope": "Exact rational finite examples; universal statements have written proofs in note.tex.",
+  "split_action": {
+    "algebra_with_two_dimensional_square_dimension": 8,
+    "bracket_pairs_checked": 64,
+    "faithful_action_dimension": 8,
+    "symmetric_space_dimension": 6
+  },
+  "status": "ALL_CHECKS_OK",
+  "zero_product": {
+    "algebra_dimension": 3,
+    "commutator_ideal_dimension": 8,
+    "derivation_dimension": 9
+  }
+}

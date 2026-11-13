@@ -1,0 +1,542 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\rank}{rank}
+\newcommand{\so}{\mathfrak{so}}
+\newcommand{\slie}{\mathfrak{sl}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\AutS}{\mathbf{Aut}}
+\newcommand{\leanlink}[2]{\href{https://github.com/the-omega-institute/trureturing/blob/da4f665789a4b88cdf9eda07a8454fc517979ba5/D5/S3/QuadraticForms/EvolutionAlgebras/#1.lean}{\texttt{#2}}}
+\title{A negative answer to Question 31\texorpdfstring{\\}{ }
+(\S2.2.5, p.~24, arXiv:2610.22248v1):\texorpdfstring{\\}{ }
+special linear obstructions for evolution algebras}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Question 31 (\S2.2.5, p.~24, arXiv:2610.22248v1) of
+Kaygorodov--Mart\'in Gonz\'alez--Viruel has a negative answer in its
+algebraic-group and group-scheme formulations: no finite-dimensional complex
+evolution algebra has full automorphism group $\mathrm{SL}_n$ for
+$n=3$ or $n\ge5$.
+We prove Conjecture~5 and answer the semisimple clause of Question~36:
+the possible semisimple derivation algebras are exactly finite sums of
+$\so_m$, $m\ge3$.
+For zero-annihilator algebras, the same restriction holds for the semisimple
+quotient of the derivation algebra, settling the simple-ideal issue in the
+comment following Conjecture~5. We also distinguish that issue from the
+existence of special-linear subalgebras. The abstract-group clause of
+Question~31 remains outside these conclusions.
+\end{abstract}
+\noindent\small This note is licensed under Creative Commons Attribution 4.0
+International (CC BY 4.0).\normalsize
+
+\section{The question and its tangent obstruction}
+Question~31 of \cite[\S2.2.5, p.~24]{survey} has a negative answer:
+$\mathrm{SL}_3$ is already an obstruction, and
+Corollary~\ref{cor:speciallinear} excludes $\mathrm{SL}_n$ for every
+$n\ge5$ as well.
+An evolution algebra over a field $k$ is a vector space with a bilinear product
+and a basis $(e_i)$ such that $e_ie_j=0$ for $i\ne j$.
+It is commutative, but need not be associative or unital.
+All algebras below are finite-dimensional. Write
+$A^2=\operatorname{span}_k\{xy:x,y\in A\}$ and
+$\Ann(A)=\{x:xA=0\}$.
+The automorphism group scheme is the functor
+\[
+ \AutS(A)(R)=\Aut_R(A\otimes_k R)
+\]
+on commutative unital $k$-algebras. It is the closed subgroup scheme of
+$\GL(A)$ defined by multiplication preservation.
+
+Question~31 of \cite[\S2.2.5, p.~24]{survey}, attributed there to
+C.~Costoya and A.~Viruel, asks separately about abstract groups, algebraic
+groups, and group schemes. The distinction matters: an abstract isomorphism
+of groups of $k$-points does not supply a tangent map.
+
+\begin{theorem}\label{thm:main}
+For every finite-dimensional complex evolution algebra $A$,
+$\Der(A)\not\cong\slie_3(\C)$ as Lie algebras. Consequently
+$\AutS(A)\not\cong\mathrm{SL}_3$ as complex group schemes, and the full
+automorphism algebraic group of $A$ is not $\mathrm{SL}_3$.
+No condition on $A^2$ or $\Ann(A)$ is required.
+\end{theorem}
+
+The group-scheme viewpoint and the identification
+$\Lie(\AutS(A))=\Der(A)$ are used by Elduque--Labra
+\cite[Introduction and \S4]{el}. Proportional-square decompositions and
+their derivation equations occur in Calder\'on Mart\'in--Fern\'andez
+Ouaridi--Kaygorodov \cite[\S5, initial derivation equations]{cfk}.
+We supply the semisimple reduction and its group-realization consequence in
+full below. Proposition~14 of the survey supplies the orthogonal examples;
+the obstruction does not contradict those examples.
+
+\section{Semisimple derivation algebras}
+Throughout this section $k$ is algebraically closed of characteristic zero.
+We use two standard consequences of semisimplicity: a semisimple Lie algebra
+has no nonzero solvable ideals and is perfect. For the latter, invariance
+and nondegeneracy of the Killing form give
+$[L,L]^\perp=Z(L)=0$. In particular, the trace of every finite-dimensional
+representation of $L$ vanishes: the trace of a commutator is zero.
+
+\begin{lemma}\label{lem:ann}
+If $\Der(A)$ is semisimple, then $\Ann(A)=0$.
+\end{lemma}
+\begin{proof}
+Set $Z=\Ann(A)$, $P=A^2$, and $L=\Der(A)$.
+Both $Z$ and $P$ are $L$-invariant, by the Leibniz rule.
+The space
+\[
+ J=\{D\in\operatorname{End}(A):D(A)\subseteq Z,\ D(P)=0\}
+       \cong\operatorname{Hom}(A/P,Z)
+\]
+consists of derivations and is an ideal of $L$.
+If $Z\subseteq P$, then $J^2=0$ under composition, so $J$ is abelian.
+Thus if $Z\ne0$ and $P\ne A$, this is a nonzero solvable ideal, a contradiction.
+If $Z\not\subseteq P$, choose $z\in Z\setminus P$ and a linear functional
+$\phi$ vanishing on $P$ with $\phi(z)=1$.
+The rank-one map $D(x)=\phi(x)z$ belongs to $J$ and has trace one on $Z$.
+This contradicts the trace-zero property of the representation of $L$ on $Z$.
+We have proved $Z=0$ or $P=A$.
+
+For a natural basis, $Z$ is spanned by precisely the $e_i$ with $e_i^2=0$:
+indeed $(\sum_i x_i e_i)e_j=x_j e_j^2$.
+If any such basis vector exists, $P$ is spanned by fewer than $\dim A$
+nonzero squares, so $P\ne A$. Therefore $Z\ne0$ is impossible.
+\end{proof}
+
+\begin{lemma}\label{lem:blocks}
+If $L=\Der(A)$ is semisimple, there are nondegenerate symmetric spaces
+$(V_a,b_a)$ and subspaces $W_a\subseteq V_a$ such that
+\[
+ L\cong\bigoplus_a\{X\in\so(V_a,b_a):XW_a=0\}.
+\]
+\end{lemma}
+\begin{proof}
+By Lemma~\ref{lem:ann}, every natural square is nonzero.
+Partition the natural basis according to the lines $k e_i^2$.
+For each class $a$, choose a representative $w_a$ of that line.
+Rescaling each basis vector, using square roots in $k$, makes $e_i^2=w_a$
+throughout its class. Put $V_a=\operatorname{span}\{e_i:i\in a\}$, with
+$b_a(e_i,e_j)=\delta_{ij}$.
+
+Write $D(e_j)=\sum_i d_{ij}e_i$. For $i\ne j$ the Leibniz rule gives
+\begin{equation}\label{eq:cross}
+ d_{ji}e_j^2+d_{ij}e_i^2=0.
+\end{equation}
+For distinct classes the two squares are linearly independent, so
+$d_{ji}=d_{ij}=0$. Thus every $V_a$ is $L$-invariant.
+Within a class, $d_{ji}=-d_{ij}$.
+Also $D(w_a)=D(e_i^2)=2d_{ii}w_a$, so all its diagonal coefficients have
+a common value $\lambda_a$. The trace of $D|_{V_a}$ is
+$(\dim V_a)\lambda_a$ and vanishes by perfectness of $L$.
+Hence $\lambda_a=0$, $D|_{V_a}\in\so(V_a,b_a)$, and $D(w_a)=0$.
+
+Let $\pi_a:A\longrightarrow V_a$ be the block projection and set
+$W_a=\operatorname{span}\{\pi_a(w_b):b\}$.
+Block diagonality shows that $D(w_b)=0$ for all $b$ precisely when
+$D|_{V_a}$ annihilates $W_a$ for every $a$.
+Conversely, any collection of skew operators annihilating the $W_a$ gives a
+derivation: equation~\eqref{eq:cross} holds, and
+$D(e_i^2)=D(w_a)=0=2d_{ii}w_a$.
+These equations on basis products are the full Leibniz rule by bilinearity.
+The blocks commute, giving the stated direct sum.
+\end{proof}
+
+\begin{lemma}\label{lem:stabilizer}
+Let $(V,b)$ be a nondegenerate symmetric space. If its pointwise stabilizer
+$\mathfrak h=\{X\in\so(V,b):XW=0\}$ is semisimple, then
+$\mathfrak h\cong\so_m(k)$ for some $m\ge0$.
+\end{lemma}
+\begin{proof}
+Put $R=W\cap W^\perp$ and choose a complement $W_0$ to $R$ in $W$.
+The form on $W_0$ is nondegenerate: a vector of $W_0$ perpendicular to $W_0$
+is perpendicular to all of $W$, so belongs to $R$ and is zero.
+Every $X\in\mathfrak h$ fixes $W_0$ and preserves $U=W_0^\perp$.
+Inside $U$ choose a decomposition $U=R\oplus H\oplus R'$ with $R,R'$
+totally isotropic and dually paired, and $H$ nondegenerate and perpendicular
+to both. To construct it, choose vectors dual to a basis of $R$ and subtract
+half their Gram matrix in the $R$ directions; their span is $R'$.
+The orthogonal complement of $R\oplus R'$ is $H$.
+Write $r=\dim R$, $m=\dim H$, and let $B$ be the Gram matrix on $H$.
+The Gram matrix and every pointwise stabilizer matrix on $U$ have the forms
+\[
+ \begin{pmatrix}0&0&I_r\\0&B&0\\I_r&0&0\end{pmatrix},
+ \qquad
+ X=\begin{pmatrix}0&-P^{t}B&C\\0&T&P\\0&0&0\end{pmatrix},
+ \quad T^tB+BT=0,\quad C^t=-C.
+\]
+These follow directly from $XR=0$ and $X^tG+GX=0$.
+Projection $X\mapsto T$ is a surjective Lie homomorphism onto $\so(H,b|_H)$:
+every such $T$ extends by zero.
+Its kernel $N$ has $T=0$; its commutators have only the $C$ block, which
+commutes with all of $N$. Thus $[N,[N,N]]=0$ and $N$ is a nilpotent ideal.
+Semisimplicity forces $N=0$. Over an algebraically closed field of
+characteristic different from two, diagonalization and rescaling identify
+$b|_H$ with the identity form, yielding $\so_m(k)$.
+\end{proof}
+
+\begin{theorem}[Conjecture 5 of the survey]\label{thm:classification}
+If $\Der(A)$ is semisimple, then
+\[
+ \Der(A)\cong\bigoplus_{a=1}^s\so_{m_a}(k),\qquad m_a\ge3.
+\]
+The empty direct sum is allowed.
+\end{theorem}
+\begin{proof}
+Apply Lemma~\ref{lem:blocks}. Every factor is semisimple, since a solvable
+ideal of a factor is a solvable ideal of the direct sum.
+Lemma~\ref{lem:stabilizer} identifies each factor with an orthogonal algebra.
+The algebras $\so_0$ and $\so_1$ vanish and may be omitted.
+The algebra $\so_2$ is nonzero one-dimensional abelian, so cannot occur.
+\end{proof}
+
+\begin{corollary}[Question 36 and the orthogonal examples]\label{cor:converse}
+Every finite direct sum $\bigoplus_a\so_{m_a}(k)$ with $m_a\ge3$ is the
+derivation algebra of an evolution algebra. Thus Theorem~\ref{thm:classification}
+answers exactly the semisimple clause of Question~36 in \cite[\S2.2.5, p.~25]{survey}.
+More generally, over any field of characteristic different from two, every
+nondegenerate symmetric space $(V,b)$ has an evolution algebra $E(b)$ with
+$\mathbf{Aut}(E(b))\cong O(b)$ and $\Der(E(b))\cong\so(V,b)$.
+\end{corollary}
+\begin{proof}
+The construction in \cite[Proposition~14 and Remark~15, pp.~13--14]{survey}
+is $E(b)=ku\oplus V$ with $u^2=u$, $uV=0$, and $vw=b(v,w)u$.
+A diagonal basis of $b$, together with $u$, is a natural basis, and
+$\Ann(E(b))=0$. Over any commutative coefficient algebra $R$,
+$E(b)_R^2=Ru$. An automorphism sends $u$ to $cu$ with $c$ a unit;
+$c^2=c$ forces $c=1$. It then preserves
+$V_R=\{x:xu=0\}$ and restricts to an isometry of $b_R$.
+Conversely every such isometry extends by fixing $u$.
+These inverse correspondences commute with base change, proving the
+group-scheme assertion. Likewise $D(u^2)=D(u)$ forces $D(u)=0$;
+the equations $D(uV)=0$ and $D(vw)=D(b(v,w)u)=0$ say exactly
+$D(V)\subseteq V$ and $b(Dv,w)+b(v,Dw)=0$.
+For $b$ the identity form of dimension $m$, write $A_m=E(b)$.
+For $A=\bigoplus_a A_{m_a}$, a derivation has no off-diagonal block:
+if $x$ is in one summand and $y$ in another, projecting
+$D(x)y+xD(y)=0$ to the latter summand puts that component of $D(x)$ in
+its zero annihilator. Hence $\Der(A)=\bigoplus_a\Der(A_{m_a})$.
+The zero algebra on the zero vector space gives the empty sum.
+The orthogonal algebras for $m\ge3$ are semisimple in characteristic zero
+(including $\so_4\cong\slie_2\oplus\slie_2$), so these are precisely the
+semisimple possibilities.
+\end{proof}
+
+\begin{corollary}[Question 14, \S2.2.2, p.~22]\label{cor:bases}
+There is a two-dimensional nondegenerate complex evolution algebra with
+exactly two automorphisms and infinitely many natural bases modulo
+permutations and independent nonzero scalings. Dimension two is minimal.
+\end{corollary}
+\begin{proof}
+Take $A=\C u\oplus\C e$, $u^2=e^2=u$, $ue=0$.
+Corollary~\ref{cor:converse} gives $\Aut(A)=O_1(\C)=\{1,-1\}$
+and $\Ann(A)=0$. For every positive integer $t$, the pair
+$(u+te,-tu+e)$ is a natural basis: its mixed product is zero and its
+determinant is $1+t^2\ne0$.
+If the bases for $t,s$ are equivalent without a swap, proportionality
+of their first vectors forces $t=s$. With a swap it would force $ts=-1$,
+which is impossible for positive integers. This separates infinitely
+many classes under the full stated equivalence relation.
+In dimension at most one all bases differ by scaling, proving minimality.
+\end{proof}
+The algebra and its full automorphism group already occur in
+\cite[Lemma~3.15 and \S5.1, $A_{8,1}$]{squares}, first posted in 2018;
+\cite[Theorem~26 and Remark~29]{cfk} give the same group ingredient in 2023.
+General natural-basis structure is treated in
+\cite[Corollary~2.13 and Proposition~2.16]{families}, first posted in 2020.
+The infinite basis quotient in \cite[Example~6.3]{solenoids}, posted in 2025,
+has nonzero annihilator and an infinite automorphism group; the argument
+above treats the zero-annihilator, finite-group clause of Question~14.
+
+\begin{corollary}[The nondegenerate simple-ideal question]\label{cor:quotient}
+Suppose $\Ann(A)=0$ over an algebraically closed field of characteristic
+zero. For $L=\Der(A)$, its semisimple quotient has the form
+\[
+ L/\rad L\cong\bigoplus_a\so_{m_a}(k),\qquad m_a\ge3.
+\]
+In particular, every simple ideal of $L$ is an orthogonal simple Lie
+algebra. Neither $\slie_3$ nor $\mathfrak g_2$ can be such an ideal,
+regardless of $\dim A^2$ or whether $L$ is semisimple.
+\end{corollary}
+\begin{proof}
+Use the normalized nonzero-square blocks in Lemma~\ref{lem:blocks},
+without assuming $L$ semisimple. Its calculation still gives
+$D|_{V_a}=\lambda_a(D)I+X_a$ with $X_a$ skew. Since
+$\lambda_a(D)=\tr(D|_{V_a})/\dim V_a$, the map
+$\lambda:L\to k^{\{a\}}$ is a Lie homomorphism to an abelian Lie algebra.
+Its kernel $K$ is precisely the direct sum of the pointwise stabilizers
+in Lemma~\ref{lem:blocks}: when every $\lambda_a=0$, all $D(w_b)=0$,
+and the converse calculation there applies.
+
+The matrix normal form in Lemma~\ref{lem:stabilizer} gives each stabilizer
+a nilpotent ideal $N$ with quotient $\so_m$; it does not require the
+stabilizer to be semisimple. For $m\ge3$ this quotient is semisimple,
+so $N$ is exactly its radical. For $m\le2$ the entire stabilizer is
+solvable. Hence $K/\rad K$ is the asserted orthogonal sum.
+The radical is characteristic \cite[Chapter~I, Definition~3.6]{lag},
+so $\rad K$ is an ideal of $L$ and lies in $\rad L$.
+Conversely $K\cap\rad L$ is a solvable ideal of $K$, giving
+$\rad K=K\cap\rad L$. The image of $K$ in $L/\rad L$ is therefore semisimple.
+The quotient of $L/\rad L$ by this image is both abelian, since
+$L/K$ is abelian, and semisimple. It is zero, proving the formula.
+
+A simple ideal of $L$ intersects $\rad L$ trivially and injects as an
+ideal of this orthogonal sum. Ideals of a semisimple Lie algebra are sums
+of its simple factors \cite[Chapter~I, Theorem~4.17]{lag}.
+The only nonsimple $\so_m$ with $m\ge3$ is
+$\so_4\cong\so_3\oplus\so_3$. Thus a simple ideal is some
+$\so_m$ with $m=3$ or $m\ge5$.
+Neither eight nor fourteen is $m(m-1)/2$, excluding $\slie_3$ and
+$\mathfrak g_2$. The latter has rank two and twelve roots, hence dimension
+fourteen \cite[Chapter~I, \S7 and Theorem~8.31]{lag}.
+\end{proof}
+
+\begin{corollary}[Special linear obstruction]\label{cor:speciallinear}
+Over an algebraically closed field of characteristic zero,
+$\Der(A)\cong\slie_n$ with $n\ge2$ is possible exactly for $n=2,4$.
+Over $\C$, the full automorphism group scheme or algebraic group of an
+evolution algebra cannot be $\mathrm{SL}_n$ when $n=3$ or $n\ge5$.
+\end{corollary}
+\begin{proof}
+If $\Der(A)\cong\slie_n$, its simplicity and
+Theorem~\ref{thm:classification} give $\slie_n\cong\so_m$;
+the $m=4$ factor is nonsimple and cannot occur.
+The classical matrix algebras have ranks $n-1$ and $\lfloor m/2\rfloor$
+and dimensions $n^2-1$ and $m(m-1)/2$
+\cite[Chapter~I, \S8, classical examples, pp.~92--96]{lag}.
+If $m=2r+1$, equality of ranks gives $r=n-1$, and dimension equality
+gives $n+1=2n-1$, so $n=2$. If $m=2r$, the same calculation gives
+$n+1=2n-3$, so $n=4$.
+Conversely $\slie_2\cong\so_3$ and $\slie_4\cong\so_6$
+(root systems $A_1=B_1$ and $A_3=D_3$), so
+Corollary~\ref{cor:converse} realizes both derivation algebras.
+Finally the dual-number argument in the proof of Theorem~\ref{thm:main}
+works for every $n$, with tangent algebra $\slie_n$; Cartier's theorem
+gives the algebraic-group comparison in characteristic zero.
+The positive Lie-algebra realizations do not assert that
+$\mathrm{SL}_2$ or $\mathrm{SL}_4$ itself is a full automorphism group.
+\end{proof}
+
+\begin{corollary}[Ideals, annihilators, and actions]\label{cor:distinction}
+The zero-annihilator hypothesis in Corollary~\ref{cor:quotient} is
+essential. Moreover the absence of a simple ideal $\slie_3$ does not
+exclude a faithful $\slie_3$ action by derivations, even when
+$\Ann(A)=0$ and $\dim A^2>1$.
+\end{corollary}
+\begin{proof}
+The zero-product algebra on $k^3$ has $\Der(A)=\mathfrak{gl}_3$,
+which contains the simple ideal $\slie_3$.
+For the second assertion let $V=k^3\oplus(k^3)^*$ and
+$b((v,f),(w,g))=f(w)+g(v)$. The injective map
+$X\mapsto\operatorname{diag}(X,-X^t)$ embeds $\slie_3$ in $\so(V,b)$.
+Corollary~\ref{cor:converse} and its direct-sum argument show that
+$A=E(b)\oplus k$, with the usual idempotent basis on the last summand,
+has $\Ann(A)=0$, $\dim A^2=2$, and $\Der(A)\cong\so_6$.
+The embedded $\slie_3$ is a subalgebra, not an ideal, since $\so_6$ is simple.
+\end{proof}
+
+\begin{corollary}[Question 37 in characteristic zero]\label{cor:smooth}
+The full automorphism group scheme of every finite-dimensional algebra
+over a characteristic-zero field is smooth. In particular, smoothness
+in Question~37 has an affirmative answer in characteristic zero.
+\end{corollary}
+\begin{proof}
+Multiplication preservation defines a closed subgroup scheme of a finite
+general linear group, so it is of finite type. Cartier's theorem
+\cite[Theorem~3.23 and Corollary~11.31(a)]{milne} applies.
+\end{proof}
+
+\section{Excluding \texorpdfstring{$\mathrm{SL}_3$}{SL3}}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The Lie algebra $\slie_3(\C)$ is simple, hence semisimple, and has dimension
+$3^2-1=8$. For completeness, choose a trace-zero diagonal matrix with distinct
+nonzero ordered pairwise differences, for instance $\operatorname{diag}(1,3,-4)$.
+Polynomial projections in its adjoint action isolate any nonzero
+off-diagonal coefficient in an ideal, giving a matrix unit $E_{ij}$.
+If a nonzero ideal initially contains only a diagonal element, it is
+nonscalar (its trace is zero), and its bracket with a suitable $E_{ij}$
+provides such a coefficient. From $E_{ij}$ the brackets with $E_{ji}$ give
+$E_{ii}-E_{jj}$ and then $E_{ji}$; brackets with the remaining matrix units
+give all off-diagonal units and diagonal differences. Thus the ideal is all
+of $\slie_3$.
+
+If $\Der(A)\cong\slie_3$, Theorem~\ref{thm:classification} expresses an
+eight-dimensional space as a direct sum of $\so_m$ with $m\ge3$.
+But $\dim\so_m=m(m-1)/2$. A summand of dimension at most eight has
+$m=3$ or $4$, of dimension three or six. Every sum of these dimensions is
+divisible by three, whereas eight is not. This is a contradiction.
+
+Over the dual numbers, $1+\epsilon D$ preserves multiplication exactly when
+\[
+ D(xy)=D(x)y+xD(y),\qquad \epsilon^2=0.
+\]
+The commutator of $1+sD$ and $1+tE$ over
+$k[s,t]/(s^2,t^2)$ is $1+st[D,E]$.
+Addition and scalar multiplication are recovered by multiplying tangent
+elements and substituting $\epsilon\mapsto a\epsilon$.
+Thus a natural isomorphism of full automorphism functors induces a Lie
+isomorphism on derivations. For $\mathrm{SL}_3$,
+$\det(1+\epsilon X)=1+\epsilon\tr X$, so the tangent algebra is $\slie_3$.
+This excludes the group-scheme realization.
+
+Finally, $\AutS(A)$ is of finite type, being a closed subgroup scheme of
+$\GL(A)$. In characteristic zero it is smooth by Cartier's theorem
+\cite[Theorem~3.23 and Corollary~11.31(a)]{milne}.
+Consequently its algebraic-group formulation has the same tangent Lie
+algebra, giving the algebraic-group conclusion as well.
+\end{proof}
+
+\section{Coverage and verification}
+The following locators refer to the version \cite{survey}.
+\begin{center}
+\small
+\begin{tabular}{@{}p{.29\linewidth}p{.64\linewidth}@{}}
+\toprule
+Source item & Coverage\\
+\midrule
+Question 31, \S2.2.5, p.~24 & Algebraic-group and group-scheme clauses refuted
+over $\C$ by $\mathrm{SL}_n$, $n=3$ or $n\ge5$; abstract-group clause not covered.\\
+Conjecture 5, \S2.3, p.~28 & Proved in Theorem~\ref{thm:classification}.\\
+Question 14, \S2.2.2, p.~22 & Final existence clause proved in
+Corollary~\ref{cor:bases}, in minimal dimension two. General classification
+and finiteness criteria not covered. Earlier algebra and group proofs cited.\\
+Comment after Conjecture 5 & Nondegenerate simple-ideal question proved in
+Corollary~\ref{cor:quotient}. Without an annihilator restriction the
+simple-ideal observation is refuted-and-corrected by
+Corollary~\ref{cor:distinction}; actions are distinguished from ideals.\\
+Question 36, \S2.2.5, p.~25 & Semisimple clause proved by
+Theorem~\ref{thm:classification} and Corollary~\ref{cor:converse};
+nilpotent and solvable clauses not covered.\\
+Proposition 14 and Remark 15, \S2.1.2, pp.~13--14 & Prior proof cited;
+Corollary~\ref{cor:converse} proves the construction functorially for all
+nondegenerate symmetric forms, including real $O(p,q)$.\\
+Question 37, \S2.2.5, p.~25 & Characteristic-zero smoothness: prior proof
+cited and applied in Corollary~\ref{cor:smooth}. Identity components,
+exponential generation, and positive characteristic not covered.\\
+Perfect algebras & Prior proof cited: $\Der(A)=0$ in characteristic zero
+by \cite[\S4]{el}; no nonzero semisimple case arises.\\
+Questions 32--35, 38 & Permutation representations, extensions, growth,
+ind-schemes and faithfulness are not covered.\\
+Other questions and conjectures & Not covered; no additional resolutions
+are asserted.\\
+\bottomrule
+\end{tabular}
+\end{center}
+The full-group realizations of $\mathrm{SL}_2$ and $\mathrm{SL}_4$,
+positive characteristic, and nilpotent or solvable realization in
+Question~36 remain outside the conclusions.
+
+\paragraph{Formal declarations.}
+The \leanlink{AlgebraicGroupRealizationRefutation}{SL3 obstruction file}'s
+declaration \texttt{result} proves
+the negation of universal realization by full natural automorphism functors
+over $\C$, using $\mathrm{SL}_3$.
+In the \leanlink{EvolutionAutomorphismTangentBridge}{tangent bridge file},
+\texttt{tangent\_lie\_equivalence} gives
+$\slie_3(\C)\cong\Der(A)$ from such a realization.
+In the \leanlink{SemisimpleDerivationClassification}{semisimple classification file},
+\texttt{result} proves the statement of
+Theorem~\ref{thm:classification} over algebraically closed characteristic-zero fields.
+In the \leanlink{DerivationAnnihilatorObstruction}{annihilator obstruction file},
+\path{Annihilator.semisimple_natural_squares_ne_zero} supplies the
+nonzero-square conclusion used in Lemma~\ref{lem:ann}.
+All these names have namespace prefix
+\path{D5.S3.QuadraticForms.EvolutionAlgebras} followed by the file's module name.
+In the \leanlink{FiniteAutomorphismsInfiniteNaturalBases}{natural basis file},
+\texttt{result} proves existence over $\C$ in dimension two of a
+commutative evolution algebra with zero annihilator, finite full
+automorphism group, and an infinite quotient of all natural
+$\mathrm{Fin}(2)$-indexed bases by permutations and independent nonzero
+scalings. This is the existence statement of Corollary~\ref{cor:bases};
+the minimality assertion has the written one-dimensional argument above.
+The statements and proofs in this note give a written argument; the
+converse construction in Corollary~\ref{cor:converse} is part of that written
+argument. The algebraic-group conclusion also uses Cartier's theorem.
+Corollaries~\ref{cor:quotient}--\ref{cor:smooth}, including the
+$n\ge5$ obstruction, are written proofs; the tangent declaration named
+above concerns $\mathrm{SL}_3$ specifically.
+
+\paragraph{Finite checks.}
+The accompanying \texttt{verify.py} checks the derivation equations for the
+orthogonal examples $1\le m\le7$, the exact Killing matrix of $\slie_3$,
+and all sums of orthogonal dimensions at most eight. The companion
+\texttt{verify\_siblings.py} checks rational diagonal forms of both signs,
+the zero-product example, the split six-dimensional $\slie_3$ action,
+and the rank--dimension comparison through $n=100$.
+It also checks the natural bases for $1\le t\le25$ and all $625$
+ordered parameter pairs for the two possible proportionality obstructions.
+These finite calculations
+illustrate the formulas; the unbounded conclusions follow from the proofs.
+
+\begin{thebibliography}{9}
+\bibitem{survey}
+I.~Kaygorodov, C.~Mart\'in Gonz\'alez and A.~Viruel,
+\emph{Evolution algebras: a survey of results and a list of open problems},
+arXiv:2610.22248v1 (2026).
+\href{https://arxiv.org/abs/2610.22248v1}{arXiv:2610.22248v1}.
+
+\bibitem{cfk}
+A.~J.~Calder\'on Mart\'in, A.~Fern\'andez Ouaridi and I.~Kaygorodov,
+\emph{Non-degenerate evolution algebras},
+J. Pure Appl. Algebra \textbf{228} (2024), article 107594.
+\href{https://doi.org/10.1016/j.jpaa.2023.107594}{doi:10.1016/j.jpaa.2023.107594}.
+The derivation equations are in \S5 of
+\href{https://arxiv.org/abs/2303.00862v1}{arXiv:2303.00862v1}.
+
+\bibitem{el}
+A.~Elduque and A.~Labra,
+\emph{Evolution algebras, automorphisms, and graphs},
+Linear Multilinear Algebra \textbf{69} (2021), 331--342.
+\href{https://doi.org/10.1080/03081087.2019.1598931}{doi:10.1080/03081087.2019.1598931};
+\href{https://arxiv.org/abs/1902.02191v1}{arXiv:1902.02191v1}.
+
+\bibitem{milne}
+J.~S.~Milne, \emph{Algebraic Groups: The Theory of Group Schemes of Finite
+Type over a Field}, Cambridge University Press, 2017.
+\href{https://www.jmilne.org/math/Books/iAG2017.pdf}{Author's text},
+Theorem~3.23 and Corollary~11.31(a).
+
+\bibitem{lag}
+J.~S.~Milne, \emph{Lie Algebras, Algebraic Groups, and Lie Groups},
+version~2.00, 5 May 2013, Chapter~I, \S\S3--4 and 7--8.
+\href{https://www.jmilne.org/math/CourseNotes/LAG.pdf}{Author's text}.
+
+\bibitem{squares}
+M.~I.~Cardoso Gon\c calves, D.~Gon\c calves, D.~Mart\'in Barquero,
+C.~Mart\'in Gonz\'alez and M.~Siles Molina,
+\emph{Squares and associative representations of two dimensional evolution algebras},
+J. Algebra Appl. \textbf{20} (2021), article 2150090.
+\href{https://doi.org/10.1142/S0219498821500900}{doi:10.1142/S0219498821500900};
+\href{https://arxiv.org/abs/1807.02362v1}{arXiv:1807.02362v1} (6 July 2018).
+
+\bibitem{families}
+N.~Boudi, Y.~Cabrera Casado and M.~Siles Molina,
+\emph{Natural families in evolution algebras},
+Publ. Mat. \textbf{66} (2022), 159--181.
+\href{https://doi.org/10.5565/PUBLMAT6612206}{doi:10.5565/PUBLMAT6612206};
+\href{https://arxiv.org/abs/2006.14460v1}{arXiv:2006.14460v1} (25 June 2020).
+
+\bibitem{solenoids}
+Y.~Cabrera Casado, M.~I.~Cardoso Gon\c calves, D.~Gon\c calves,
+D.~Mart\'in Barquero, C.~Mart\'in Gonz\'alez and I.~Ruiz Campos,
+\emph{Solenoids in automorphism groups of evolution algebras},
+\href{https://arxiv.org/abs/2505.14584v1}{arXiv:2505.14584v1} (20 May 2025),
+Example~6.3.
+\end{thebibliography}
+\end{document}
