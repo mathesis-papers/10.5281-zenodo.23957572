@@ -2,12 +2,12 @@
   "schema": "mathesis.materials.v1",
   "work": "kmvq31-sl3-obstruction",
   "version": 2,
-  "repository_url": "https://github.com/mathesis-papers/6aec385d127fecfd3d2bfbf4",
-  "site_url": "https://papers.trureturing.org/6aec385d127fecfd3d2bfbf4/",
+  "repository_url": "https://github.com/mathesis-papers/10.5281-zenodo.23957572",
+  "site_url": "https://papers.trureturing.org/10.5281-zenodo.23957572/",
   "doi": "10.5281/zenodo.23957573",
   "reading": {
-    "en": "https://papers.trureturing.org/6aec385d127fecfd3d2bfbf4/en/",
-    "zh": "https://papers.trureturing.org/6aec385d127fecfd3d2bfbf4/zh/"
+    "en": "https://papers.trureturing.org/10.5281-zenodo.23957572/en/",
+    "zh": "https://papers.trureturing.org/10.5281-zenodo.23957572/zh/"
   },
   "slides": [],
   "visualizations": []
