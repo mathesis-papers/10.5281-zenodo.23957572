@@ -2,16 +2,16 @@
   "files": {
     "pdf": {
       "bytes": 102897,
-      "matches_public": null,
+      "matches_public": true,
       "path": "paper.pdf",
-      "public_sha256": null,
+      "public_sha256": "ca782a8ae13d0ed127005ac496b1ea27e9d89b8e5272471597ab9a30d0f95ff7",
       "sha256": "ca782a8ae13d0ed127005ac496b1ea27e9d89b8e5272471597ab9a30d0f95ff7"
     },
     "source": {
       "bytes": 18925,
-      "matches_public": null,
+      "matches_public": true,
       "path": "source.archive",
-      "public_sha256": null,
+      "public_sha256": "82a80ae1f631b524c826460904f6274a15763516fc59277dea73f95c1234bf2e",
       "sha256": "82a80ae1f631b524c826460904f6274a15763516fc59277dea73f95c1234bf2e"
     }
   },
@@ -38,6 +38,8 @@
     "license": "CC-BY-4.0",
     "msc": [],
     "pdf": {
+      "bytes": 102897,
+      "sha256": "ca782a8ae13d0ed127005ac496b1ea27e9d89b8e5272471597ab9a30d0f95ff7",
       "url": "/api/v1/collected-papers/kmvq31-sl3-obstruction/files/pdf?version=2"
     },
     "previous_version": null,
@@ -46,6 +48,8 @@
     "record": "kmvq31-sl3-obstruction",
     "repository_name": "10.5281-zenodo.23957572",
     "source": {
+      "bytes": 18925,
+      "sha256": "82a80ae1f631b524c826460904f6274a15763516fc59277dea73f95c1234bf2e",
       "url": "/api/v1/collected-papers/kmvq31-sl3-obstruction/files/source?version=2"
     },
     "title": "A negative answer to Question 31 (section 2.2.5, page 24, arXiv:2610.22248v1): special linear obstructions for evolution algebras",

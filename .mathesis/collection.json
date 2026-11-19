@@ -1,7 +1,7 @@
 {
   "git_blobs": {
     ".github/workflows/pages.yml": "7879724db1358178aad7e9bed326a44be44f5a6a",
-    ".mathesis/generated.json": "8874c697259a29e0dfbbc370834bf17b56ab6bfe",
+    ".mathesis/generated.json": "9026a159fa30b1ef18a18c8b43240051fca1b904",
     "CHANGELOG.md": "7a58a359190b15d95ffa0bf238bb01f63b367001",
     "CITATION.cff": "252d8170b8b7f1cd9ed70b31e13f5e6ef9f62904",
     "CONTRIBUTING.md": "ea69168fc2cb506b57b00de1ef588aaf011aa3da",
@@ -15,7 +15,7 @@
     "manuscript/kmvq31-sl3-obstruction/verification.json": "c83b7f09b42d1e46a26cf0094994c6ae4b723a10",
     "manuscript/kmvq31-sl3-obstruction/verify.py": "47b70cc33ea89866dcedb3ab7d00e348700dde30",
     "manuscript/kmvq31-sl3-obstruction/verify_siblings.py": "cfb489915559fa29ba926b497f155dadf1b441ee",
-    "paper.json": "860a8199388aef43b3bdc44a9204d317dac323d9",
+    "paper.json": "5aee22625f75957629437cd2291877c968254fa9",
     "paper.pdf": "d16d569e717f4a93dc47188dd6c2430c75c6adf1",
     "site/en/index.html": "89c01663f3d82649ce05ca0a112a93e52562697c",
     "site/index.html": "557b095d59a282edfd435bcf0fd404f92dc14a5c",
@@ -43,7 +43,7 @@
   "schema": "mathesis.paper-collection.v1",
   "sha256": {
     ".github/workflows/pages.yml": "f15d983dcb8f324ffdedb50b05f7380e11fda8723d49b5c8f10ef0f414612372",
-    ".mathesis/generated.json": "4e8edb0ac3904e1149503b3a1381b3f4edca465b8b61d384a70935b5fb3f763e",
+    ".mathesis/generated.json": "0a6a776d1c6bceac7b34e25070a8510ec22b30a9d288571b2471d0a8c30d608a",
     "CHANGELOG.md": "04309b1a48eb2b0b8fbcc7c640bd4e3d1f3adc57805d81b6a94c4dc05e3d4670",
     "CITATION.cff": "083a640c99a5b174c186f5d312aab2cd51993c03b8fd935bc80c00dfad746f96",
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
@@ -57,7 +57,7 @@
     "manuscript/kmvq31-sl3-obstruction/verification.json": "902571ea9e0f9dc309b912494c86d99271ed215dd3f0ce34fc75bf7a13af3505",
     "manuscript/kmvq31-sl3-obstruction/verify.py": "718c51b2ec65d5ffe5606d0063a37436b1ed451f335bd4862dc44d4ac71aefc6",
     "manuscript/kmvq31-sl3-obstruction/verify_siblings.py": "f7e62d5555cfcc96ea8e1ddcece8e0dd4f567d66ecbe7a74e111b1e18ad3c915",
-    "paper.json": "bf73e490eaf4b27ad542a05be69c4d4e647868c7baffd35f09fa3137ac7abea5",
+    "paper.json": "c52f23ea345c9ac59a9f0ea27a1ef66ad0e917b0170accc14b8b36b6ea7a171e",
     "paper.pdf": "ca782a8ae13d0ed127005ac496b1ea27e9d89b8e5272471597ab9a30d0f95ff7",
     "site/en/index.html": "741d258415141a9b659c62dcc661327c5b1a39c20b7ce822ab5b6d7f5c8d12b2",
     "site/index.html": "77a0af4685c87df0ad6024ebbdaf3bca430f1b44832a8ff950d8565a1fed3fa3",

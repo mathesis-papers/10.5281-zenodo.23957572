@@ -32,9 +32,9 @@
     "manuscript/kmvq31-sl3-obstruction/verification.json": "902571ea9e0f9dc309b912494c86d99271ed215dd3f0ce34fc75bf7a13af3505",
     "manuscript/kmvq31-sl3-obstruction/verify.py": "718c51b2ec65d5ffe5606d0063a37436b1ed451f335bd4862dc44d4ac71aefc6",
     "manuscript/kmvq31-sl3-obstruction/verify_siblings.py": "f7e62d5555cfcc96ea8e1ddcece8e0dd4f567d66ecbe7a74e111b1e18ad3c915",
-    "paper.json": "bf73e490eaf4b27ad542a05be69c4d4e647868c7baffd35f09fa3137ac7abea5",
+    "paper.json": "c52f23ea345c9ac59a9f0ea27a1ef66ad0e917b0170accc14b8b36b6ea7a171e",
     "paper.pdf": "ca782a8ae13d0ed127005ac496b1ea27e9d89b8e5272471597ab9a30d0f95ff7",
     "source.archive": "82a80ae1f631b524c826460904f6274a15763516fc59277dea73f95c1234bf2e"
   },
-  "snapshot_identity": "e87bf3fe68da8295813c6cb114daca2c390d9dbd1321a9e80e0773a5957b8f37"
+  "snapshot_identity": "18bc2bd05643292cc4350d029b41c6f5c0d2e242e2715f91e3dce7fb8bd56027"
 }
