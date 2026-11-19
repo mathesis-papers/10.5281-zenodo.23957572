@@ -1,0 +1,203 @@
+{
+  "voice": "af_heart",
+  "speed": 0.98,
+  "say": {
+    "Lie": "Lee",
+    "semisimple": "semi simple"
+  },
+  "music": {
+    "bpm": 84,
+    "progression": "d-minor"
+  },
+  "scenes": [
+    {
+      "id": "table",
+      "name": "SPARSE MULTIPLICATION",
+      "lead": 0.8,
+      "tail": 0.7,
+      "music": [
+        0.5,
+        0.12,
+        0.12,
+        0.0,
+        0.0
+      ],
+      "lines": [
+        [
+          "Start with two symbols. Each squares to u, but their mixed product is zero.",
+          "从两个符号开始：各自的平方都是 u，但混合乘积为零。"
+        ],
+        [
+          "A finite-dimensional evolution algebra admits a basis like this: distinct basis vectors multiply to zero.",
+          "有限维演化代数有这样的基：不同基向量相乘为零。"
+        ],
+        [
+          "Which invertible changes preserve the entire multiplication table?",
+          "哪些可逆变换保持整张乘法表？"
+        ]
+      ]
+    },
+    {
+      "id": "tiny",
+      "name": "THE PRODUCT RULE",
+      "lead": 0.8,
+      "tail": 0.7,
+      "music": [
+        0.5,
+        0.12,
+        0.12,
+        0.0,
+        0.0
+      ],
+      "lines": [
+        [
+          "Test a tiny change, identity plus epsilon D, with epsilon squared equal to zero.",
+          "测试微小变化：恒等变换加上 εD，其中 ε 的平方为零。"
+        ],
+        [
+          "Multiplication preservation becomes the product rule. Such a map D is called a derivation.",
+          "保持乘法恰好给出乘积法则，这样的 D 称为导子。"
+        ],
+        [
+          "These infinitesimal symmetries form a Lie algebra, with bracket D E minus E D.",
+          "这些无穷小对称构成李代数，括号为 DE 减 ED。"
+        ]
+      ]
+    },
+    {
+      "id": "blocks",
+      "name": "WHY SKEW BLOCKS?",
+      "lead": 0.8,
+      "tail": 0.7,
+      "music": [
+        0.5,
+        0.12,
+        0.12,
+        0.0,
+        0.0
+      ],
+      "lines": [
+        [
+          "Apply the product rule to two different basis vectors. Two square terms must cancel.",
+          "对两个不同基向量使用乘积法则，两个平方项必须相消。"
+        ],
+        [
+          "Different square directions force both coefficients to vanish. Equal normalized squares force opposite matrix entries.",
+          "平方方向不同，两个系数都为零；规范化后的平方相同，相反位置的矩阵元互为相反数。"
+        ],
+        [
+          "That is the pattern of a skew matrix, the infinitesimal version of preserving a symmetric pairing.",
+          "这就是反对称矩阵的模式，对应保持对称配对的无穷小变换。"
+        ]
+      ]
+    },
+    {
+      "id": "classify",
+      "name": "THE STRUCTURAL THEOREM",
+      "lead": 0.8,
+      "tail": 0.7,
+      "music": [
+        0.5,
+        0.12,
+        0.12,
+        0.0,
+        0.0
+      ],
+      "lines": [
+        [
+          "The paper proves a classification when the derivation algebra is semisimple: it has no nonzero solvable ideals.",
+          "论文在导子代数半单时给出分类；半单指没有非零可解理想。"
+        ],
+        [
+          "Over an algebraically closed field of characteristic zero, it is a finite sum of orthogonal Lie algebras, with block sizes at least three.",
+          "在特征零代数闭域上，它是有限个正交李代数的直和，每块大小至少为三。"
+        ],
+        [
+          "The empty sum is allowed. The full argument removes a nilpotent stabilizer kernel.",
+          "允许空直和；完整论证会去掉稳定子中的幂零核。"
+        ]
+      ]
+    },
+    {
+      "id": "eight",
+      "name": "THE EIGHT-DIMENSION TRAP",
+      "lead": 0.8,
+      "tail": 0.7,
+      "music": [
+        0.5,
+        0.12,
+        0.12,
+        0.0,
+        0.0
+      ],
+      "lines": [
+        [
+          "A skew matrix of size m has m times m minus one, divided by two, independent entries.",
+          "大小为 m 的反对称矩阵有 m 乘 m 减一再除以二个独立坐标。"
+        ],
+        [
+          "Blocks of sizes three and four have dimensions three and six. Size five already needs ten.",
+          "大小三和四的块分别是三维与六维；大小五已经需要十维。"
+        ],
+        [
+          "But the simple Lie algebra of trace-zero three by three matrices has dimension eight. No sum of threes and sixes is eight.",
+          "但三乘三迹零矩阵构成的简单李代数是八维的；三和六无论怎样相加都不会得到八。"
+        ]
+      ]
+    },
+    {
+      "id": "bridge",
+      "name": "BACK TO THE FULL GROUP",
+      "lead": 0.8,
+      "tail": 0.7,
+      "music": [
+        0.5,
+        0.12,
+        0.12,
+        0.0,
+        0.0
+      ],
+      "lines": [
+        [
+          "The determinant-one group, S L three, has precisely those trace-zero matrices as its infinitesimal symmetries.",
+          "行列式为一的 SL₃ 群，其无穷小对称恰好是这些迹零矩阵。"
+        ],
+        [
+          "An isomorphism of full automorphism group schemes would preserve the tangent Lie algebra, giving the contradiction.",
+          "全部自同构群概形的同构会保持切李代数，于是产生矛盾。"
+        ],
+        [
+          "Characteristic-zero smoothness gives the algebraic-group conclusion too.",
+          "特征零的光滑性也给出代数群版本的结论。"
+        ]
+      ]
+    },
+    {
+      "id": "limits",
+      "name": "WHAT THE RESULT DOES NOT SAY",
+      "lead": 0.8,
+      "tail": 0.7,
+      "music": [
+        0.5,
+        0.12,
+        0.12,
+        0.0,
+        0.0
+      ],
+      "lines": [
+        [
+          "This excludes S L three as the full group, without assumptions on the annihilator or the square space.",
+          "这排除了作为全部群的 SL₃，无需对零化子或平方空间作额外假设。"
+        ],
+        [
+          "It does not exclude faithful actions by a smaller subalgebra. It does not settle the abstract-group question.",
+          "它不排除较小子代数的忠实作用，也没有解决抽象群版本的问题。"
+        ],
+        [
+          "The key is structural: sparse multiplication permits orthogonal blocks, and eight dimensions cannot fit.",
+          "关键是结构：稀疏乘法允许正交块，但八个维度装不进去。"
+        ]
+      ]
+    }
+  ]
+}

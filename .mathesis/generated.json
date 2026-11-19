@@ -13,9 +13,9 @@
     "manuscript/kmvq31-sl3-obstruction/verification.json",
     "manuscript/kmvq31-sl3-obstruction/verify.py",
     "manuscript/kmvq31-sl3-obstruction/verify_siblings.py",
+    "manuscript/original-source.archive",
     "paper.json",
-    "paper.pdf",
-    "source.archive"
+    "paper.pdf"
   ],
   "generator_version": "0.1.0",
   "sha256": {
@@ -32,9 +32,9 @@
     "manuscript/kmvq31-sl3-obstruction/verification.json": "902571ea9e0f9dc309b912494c86d99271ed215dd3f0ce34fc75bf7a13af3505",
     "manuscript/kmvq31-sl3-obstruction/verify.py": "718c51b2ec65d5ffe5606d0063a37436b1ed451f335bd4862dc44d4ac71aefc6",
     "manuscript/kmvq31-sl3-obstruction/verify_siblings.py": "f7e62d5555cfcc96ea8e1ddcece8e0dd4f567d66ecbe7a74e111b1e18ad3c915",
-    "paper.json": "c52f23ea345c9ac59a9f0ea27a1ef66ad0e917b0170accc14b8b36b6ea7a171e",
-    "paper.pdf": "ca782a8ae13d0ed127005ac496b1ea27e9d89b8e5272471597ab9a30d0f95ff7",
-    "source.archive": "82a80ae1f631b524c826460904f6274a15763516fc59277dea73f95c1234bf2e"
+    "manuscript/original-source.archive": "82a80ae1f631b524c826460904f6274a15763516fc59277dea73f95c1234bf2e",
+    "paper.json": "3e3d2ed8c74be4b251d6c69877659bbfd5a5d667755c7fe9f2ee26b06155f431",
+    "paper.pdf": "ca782a8ae13d0ed127005ac496b1ea27e9d89b8e5272471597ab9a30d0f95ff7"
   },
-  "snapshot_identity": "18bc2bd05643292cc4350d029b41c6f5c0d2e242e2715f91e3dce7fb8bd56027"
+  "snapshot_identity": "2784772aa8aef6bcd57791973ea99764714d8e71c26e64d13909ba3865603d97"
 }

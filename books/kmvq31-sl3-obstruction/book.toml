@@ -1,0 +1,17 @@
+[book]
+version = "2"
+authors = ["Haobo Ma", "Wenlin Zhang"]
+license = "CC-BY-4.0"
+editions = ["zh", "en"]
+date = "2026-11-05"
+[book.title]
+zh = "A negative answer to Question 31 (section 2.2.5, page 24, arXiv:2610.22248v1): special linear obstructions for evolution algebras"
+en = "A negative answer to Question 31 (section 2.2.5, page 24, arXiv:2610.22248v1): special linear obstructions for evolution algebras"
+[outputs]
+html = true
+pdf = ["academic"]
+epub = true
+[mathesis]
+work = "kmvq31-sl3-obstruction"
+version = 2
+source_title = "A negative answer to Question 31 (section 2.2.5, page 24, arXiv:2610.22248v1): special linear obstructions for evolution algebras"

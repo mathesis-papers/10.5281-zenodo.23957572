@@ -1,0 +1,121 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{演化代数的特殊线性障碍}
+\author{Haobo Ma\inst{1} \and Wenlin Zhang\inst{1,2}}
+\institute{\inst{1}Chrono AI, Singapore\and\inst{2}National University of Singapore, Singapore}
+\date{Version 2, 2026}
+\begin{document}
+% Manuscript: Title and author metadata
+\begin{frame}\titlepage\note{本报告依据原论文第2版，姓名按原记录保留。}\end{frame}
+% Manuscript: Sections 1--4
+\begin{frame}{路线}\tableofcontents\note{先讲乘法和微小对称，再讲正交分类与障碍；技术推论放在附录。}\end{frame}
+\section{问题与微小对称}
+% Manuscript: Section 1; Corollaries 6 and 7
+\begin{frame}{一张乘法表}
+\[u^2=e^2=u,\qquad ue=0.\]\[(au+be)(cu+de)=(ac+bd)u.\]\begin{itemize}\item 不同基向量相乘为零：自然基。\item 不要求结合律：$(ue)e=0$，但 $u(e^2)=u$。\item 哪些可逆坐标变化保持全部乘法？\end{itemize}
+\note{先让听众计算 $e\mapsto-e$ 保持乘法。任意旋转不一定固定平方像的直线及幂等元。演化代数是双线性乘法加上某个自然基的存在性。}
+\end{frame}
+% Manuscript: Section 1; survey Question 31
+\begin{frame}{要实现的是全部对称}
+\begin{block}{Question 31}\textbf{每个}代数群能否是某个有限维演化代数的\textbf{全部}自同构群？\end{block}\begin{itemize}\item Kaygorodov--Mart\'{i}n Gonz\'{a}lez--Viruel 综述。\item 问题归于 Costoya 与 Viruel。\item 抽象群、代数群、群概形是不同版本。\end{itemize}
+\note{原综述定位为 \S2.2.5，第24页。子群实现并不足够；本报告先讨论复数域与保留几何结构的完整自同构。}
+\end{frame}
+% Manuscript: Section 3, proof of Theorem 1
+\begin{frame}{把微小变化代入乘法}
+\[I+\epsilon D,\qquad \epsilon^2=0.\]\[(I+\epsilon D)(xy)=((I+\epsilon D)x)((I+\epsilon D)y).\]\begin{block}{比较一次项}\[D(xy)=D(x)y+xD(y).\]\end{block}导子：$\operatorname{Der}(A)$；括号：$[D,E]=DE-ED$。
+\note{这里不是近似估计；对偶数中 $\epsilon^2$ 精确为零。乘法保持恒等式的一次项就是导子的定义。切空间观点见 Elduque--Labra。}
+\end{frame}
+% Manuscript: Section 3, proof of Theorem 1
+\begin{frame}{$\mathrm{SL}_3$ 的八个方向}
+\[\det(I+\epsilon X)=1+\epsilon\operatorname{tr}X.\]\[\mathfrak{sl}_3=\{X\in M_3(\mathbb C):\operatorname{tr}X=0\}.\]\begin{center}九个坐标，一条独立线性方程：\[\dim\mathfrak{sl}_3=8.\]\end{center}
+\note{先定义 $\mathrm{SL}_3$ 为行列式一矩阵群，再区分大写群与小写李代数。其简单性使分类定理可用；附录及正文给出矩阵单位证明。}
+\end{frame}
+\section{正交结构}
+% Manuscript: Lemma 3
+\begin{frame}{平方方向控制导子}
+\[D(e_j)=\sum_i d_{ij}e_i.\]\[0=D(e_ie_j)=d_{ji}e_j^2+d_{ij}e_i^2\quad(i\ne j).\]\begin{itemize}\item 不同平方直线：两个系数都为零。\item 相同且已规范化的平方：$d_{ji}=-d_{ij}$。\item 半单性再排除对角标量部分。\end{itemize}
+\note{先用零化子引理排除零平方。代数闭性允许取平方根，令同组平方相等。相同平方的组构成不变块。半单性给出完美性，块表示的迹为零。}
+\end{frame}
+% Manuscript: Lemmas 3 and 4
+\begin{frame}{正交为何出现}
+\[b(Xv,w)+b(v,Xw)=0.\]\[b(v,w)=v^tw\quad\Longrightarrow\quad X^t=-X.\]\[\dim\mathfrak{so}_m=\binom m2=\frac{m(m-1)}2.\]\begin{block}{结构步骤}平方块 $\to$ 逐点稳定子 $\to$ 幂零核消失。\end{block}
+\note{反对称矩阵的对角为零，上三角任意决定下三角。不能直接取退化子空间的正交补；稳定子证明先分离根空间，再得到幂零核。}
+\end{frame}
+% Manuscript: Theorem 5
+\begin{frame}{半单分类}
+\begin{bookresult}{classification}若 $k$ 代数闭且特征零、$A$ 为有限维演化代数，且 $\operatorname{Der}(A)$ 半单，则\[\operatorname{Der}(A)\cong\bigoplus_{a=1}^{s}\mathfrak{so}_{m_a}(k),\quad m_a\ge3.\]允许 $s=0$。\end{bookresult}
+\note{这是综述 Conjecture 5。半单是无非零可解理想；简单是无非平凡理想且非交换。$\mathfrak{so}_4$ 虽不简单但半单。此页的公开 Lean 声明完整匹配必要性方向，不含逆向实现。}
+\end{frame}
+% Manuscript: Section 3, proof of Theorem 1
+\begin{frame}{八不能由三和六拼成}
+\begin{center}\begin{tabular}{c|ccc}$m$&3&4&5\\\hline$\dim\mathfrak{so}_m$&3&6&10\end{tabular}\end{center}\begin{itemize}\item 八维直和的每个非零块至多八维。\item 所以只允许三维或六维块。\item $3a+6b\ne8$，对所有 $a,b\in\mathbb Z_{\ge0}$。\end{itemize}\[\operatorname{Der}(A)\not\cong\mathfrak{sl}_3(\mathbb C).\]
+\note{这是整数整除论证，不是仅试几个块。$m\ge5$ 的维数至少十，单调增加。零块不影响维数。}
+\end{frame}
+\section{群障碍与实现}
+% Manuscript: Theorem 1 and its proof
+\begin{frame}{回到全部自同构群}
+\begin{bookresult}{sl3-obstruction}对每个有限维复演化代数，\[\operatorname{Der}(A)\not\cong\mathfrak{sl}_3(\mathbb C),\qquad\mathbf{Aut}(A)\not\cong\mathrm{SL}_3.\]全部自同构代数群也不是 $\mathrm{SL}_3$。\end{bookresult}\begin{itemize}\item 不限制 $A^2$ 或 $\operatorname{Ann}(A)$。\item 自然函子同构给出切李同构。\item 特征零光滑性给出代数群比较。\end{itemize}
+\note{在 $k[s,t]/(s^2,t^2)$ 中，切向元素的交换子是 $I+st[D,E]$，所以不仅得到向量空间同构，还保留括号。抽象群同构没有这个保证。}
+\end{frame}
+% Manuscript: Corollary 6
+\begin{frame}{允许的块确实能实现}
+\begin{bookresult}{orthogonal-realization}特征不为二，$b$ 为非退化对称形式：\[E(b)=ku\oplus V,\quad u^2=u,\ uV=0,\ vw=b(v,w)u.\]\[\mathbf{Aut}(E(b))\cong O(b),\qquad\operatorname{Der}(E(b))\cong\mathfrak{so}(V,b).\]\end{bookresult}在特征零代数闭域上取有限直和，实现全部允许的半单导子代数，包括空直和。
+\note{归功于综述 Proposition 14 与 Remark 15 的构造。任意系数代数上，平方空间是 $Ru$，自同构必须固定幂等元 $u$，于是限制为 $V$ 上的等距变换；此论证与基变换相容。}
+\end{frame}
+% Manuscript: Corollary 9
+\begin{frame}{特殊线性族：两个李代数例外}
+\begin{bookresult}{special-linear}特征零代数闭域上，设 $n\ge2$，$A$ 遍历有限维演化代数：\[\bigl(\exists A:\operatorname{Der}(A)\cong\mathfrak{sl}_n\bigr)\quad\Longleftrightarrow\quad n\in\{2,4\}.\]复数域上，全部群 $\mathrm{SL}_n$ 在 $n=3$ 或 $n\ge5$ 时不能实现。\end{bookresult}\[\mathfrak{sl}_2\cong\mathfrak{so}_3,\qquad\mathfrak{sl}_4\cong\mathfrak{so}_6.\]这不宣称全部群 $\mathrm{SL}_2,\mathrm{SL}_4$ 的正面实现。
+\note{简单性只允许一个简单正交因子。比较秩 $n-1=\lfloor m/2\rfloor$ 与维数 $n^2-1=m(m-1)/2$。奇数 $m$ 得到 $n=2$，偶数 $m$ 得到 $n=4$。}
+\end{frame}
+\section{边界与来源}
+% Manuscript: Coverage and verification
+\begin{frame}{结论的边界}
+\begin{itemize}\item Question 31：否定代数群与群概形的普遍实现；抽象群部分未处理。\item Question 36：准确解决半单部分；可解与幂零部分未处理。\item Question 14：最小维数的存在性例子；不是一般分类。\item Question 37：仅特征零的光滑性。\item 正特征与全部群 $\mathrm{SL}_2,\mathrm{SL}_4$ 在结论外。\end{itemize}
+\note{这些编号定位原综述，而非本书的生成编号。不要将简单理想的排除误读为排除子代数或忠实作用。后面的附录展示具体区别。}
+\end{frame}
+% Manuscript: Coverage and verification; Formal declarations
+\begin{frame}{来源与形式化范围}
+\begin{itemize}\item 原论文第2版：\href{https://doi.org/10.5281/zenodo.23957573}{10.5281/zenodo.23957573}。\item 分类定理：完整匹配公开 Lean 声明。\item $\mathrm{SL}_3$：公开主声明为普遍函子实现的否定。\item 自然基：公开主声明为有限群与无限基类；没有恰好两个或最小性。\item 其余完整结论保留书面证明及对应贡献请求。\end{itemize}
+\note{原数学归属与形式化贡献必须区分。有限样例计算不证明无界结论。源码及贡献入口在阅读版的文献章节，附录账本链接精确依据。}
+\end{frame}
+\appendix
+\section{技术补充}
+% Manuscript: Lemma 2
+\begin{frame}{零化子的消失}
+{\small $k$ 是特征零代数闭域，$A$ 是有限维演化代数。记 $L=\operatorname{Der}(A)$，$Z=\operatorname{Ann}(A)$。}
+\begin{bookresult}{annihilator}$\operatorname{Der}(A)$ 半单 $\Longrightarrow\operatorname{Ann}(A)=0$。\end{bookresult}\[J=\operatorname{Hom}(A/A^2,\operatorname{Ann}(A)).\]\begin{itemize}\item 若 $Z\subseteq A^2$，则 $J^2=0$。\item 若 $Z\not\subseteq A^2$，构造在 $Z$ 上迹为一的秩一导子。\item 零自然平方保证 $A^2\ne A$。\end{itemize}
+\note{$J$ 是导子理想。半单性排除非零可解理想，完美性排除表示中非零迹。公开非零平方引理可组合成此表述。}
+\end{frame}
+% Manuscript: Lemmas 3 and 4
+\begin{frame}{逐点稳定子的准确形式}
+\begin{bookresult}{square-blocks}\[L\cong\bigoplus_a\{X\in\mathfrak{so}(V_a,b_a):XW_a=0\}.\]\end{bookresult}\[W_a=\operatorname{span}\{\pi_a(w_b):b\}.\]\begin{bookresult}{stabilizer}若逐点稳定子半单，则它同构于某个 $\mathfrak{so}_m$，$m\ge0$。\end{bookresult}
+\note{本页仍在特征零代数闭域上。$w_b$ 是规范化平方代表，$\pi_a$ 是块投影。保持 $W_a$ 与逐点消去 $W_a$ 不同，后者才是准确条件。}
+\end{frame}
+% Manuscript: Lemma 4
+\begin{frame}{稳定子的核为什么消失}
+\[U=R\oplus H\oplus R^{\prime},\qquad R=W\cap W^\perp.\]\[X=\begin{pmatrix}0&-P^tB&C\\0&T&P\\0&0&0\end{pmatrix},\quad T^tB+BT=0,\ C^t=-C.\]\[X\longmapsto T,\quad N=\ker(X\mapsto T),\quad[N,[N,N]]=0.\]半单性迫使 $N=0$；对角化 $b|_H$ 得到标准正交形式。
+\note{先分离 $W$ 的非退化补空间 $W_0$，在其正交补内构造双曲配对 $R,R^{\prime}$。投影是满射，因为每个 $T$ 可以零延拓。核的括号仅有 $C$ 块，再取括号即零。}
+\end{frame}
+% Manuscript: Corollary 8
+\begin{frame}{无需整个导子代数半单}
+\begin{bookresult}{semisimple-quotient}若 $\operatorname{Ann}(A)=0$，则\[L/\operatorname{rad}L\cong\bigoplus_a\mathfrak{so}_{m_a},\qquad m_a\ge3.\]每个简单理想都正交；不能是 $\mathfrak{sl}_3$ 或 $\mathfrak g_2$。\end{bookresult}\[\lambda_a(D)=\frac{\operatorname{tr}(D|_{V_a})}{\dim V_a},\qquad K=\ker\lambda.\]
+\note{不限制 $\dim A^2$。$L/K$ 交换，而 $K/\operatorname{rad}K$ 是正交直和。利用 $\operatorname{rad}K=K\cap\operatorname{rad}L$，再商既交换又半单只能为零。}
+\end{frame}
+% Manuscript: Corollary 7
+\begin{frame}{有限群不限制自然基类数}
+\begin{bookresult}{natural-bases}存在零化子为零的二维复演化代数，恰有两个自同构，但自然基模排列与独立缩放后无限。二维最小。\end{bookresult}\[u^2=e^2=u,\ ue=0;\qquad (u+te,-tu+e),\ t\in\mathbb Z_{>0}.\]\begin{itemize}\item 混合乘积零，行列式 $1+t^2\ne0$。\item 不交换迫使 $t=s$；交换迫使 $ts=-1$。\end{itemize}
+\note{自同构群 $O_1(\mathbb C)$ 已有先行研究，必须归功于原文文献。零维和一维的基都仅差缩放，故最小性成立。有限个参数的实验不能证明无限性。}
+\end{frame}
+% Manuscript: Corollary 10
+\begin{frame}{子代数不等于理想}
+\begin{bookresult}{ideals-actions}零化子条件不可去掉；排除简单理想不排除忠实 $\mathfrak{sl}_3$ 导子作用。\end{bookresult}\begin{itemize}\item 零乘法 $k^3$：$\operatorname{Der}(A)=\mathfrak{gl}_3$。\item $V=k^3\oplus(k^3)^*$，$b((v,f),(w,g))=f(w)+g(v)$。\item $X\mapsto\operatorname{diag}(X,-X^t)$ 嵌入 $\mathfrak{so}_6$。\item $A=E(b)\oplus k$：$\operatorname{Ann}(A)=0$，$\dim A^2=2$。\end{itemize}
+\note{保持全章特征零代数闭域假设。最后 $k$ 因子是幂等一维代数，没有非零导子。$\mathfrak{so}_6$ 简单，因此嵌入的严格子代数不是理想。}
+\end{frame}
+% Manuscript: Corollary 11
+\begin{frame}{Cartier 光滑性}
+\begin{bookresult}{smoothness}任意特征零域上的每个有限维代数，其全部自同构群概形都光滑。\end{bookresult}\begin{itemize}\item 保持乘法的多项式方程定义 $\mathrm{GL}(A)$ 的闭子群概形。\item 它是有限型；应用 Cartier 定理。\item 不需要演化基或代数闭性。\end{itemize}
+\note{这是先行定理的应用。文献为 Milne 的 Algebraic Groups，Theorem 3.23 与 Corollary 11.31(a)。不涉及正特征、连通分支或指数生成。}
+\end{frame}
+% Manuscript: Formal declarations (source-linked ledger)
+\FormalVerification
+\end{document}

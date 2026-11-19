@@ -1,0 +1,29 @@
+{
+  "duration": "2:31",
+  "id": "001-eight-directions",
+  "lean": [
+    "D5/S3/QuadraticForms/EvolutionAlgebras/SemisimpleDerivationClassification.result"
+  ],
+  "narration": {
+    "engine": "Kokoro-82M v1.0 (onnx)",
+    "language": "en",
+    "voice": "af_heart"
+  },
+  "outputs": {
+    "cover": "kmvq31-sl3-obstruction_001_cover.jpg",
+    "narrated_720p": "kmvq31-sl3-obstruction_001_720p_narrated.mp4"
+  },
+  "publication_basis": "pinned",
+  "released": "2026-11-15",
+  "resolution": "1280x720@30",
+  "style": "trureturing cyberpunk · deterministic canvas",
+  "subject": "https://github.com/the-omega-institute/trureturing",
+  "subtitles": [
+    "zh",
+    "en"
+  ],
+  "summary": "Sparse multiplication forces infinitesimal symmetries into orthogonal blocks; their dimensions cannot add up to eight. A focused explanation of the SL3 obstruction, with its precise limits.",
+  "summary_zh": "稀疏乘法迫使微小对称形成正交块，其维数无法相加为八。聚焦讲解 SL₃ 障碍及其准确边界。",
+  "title": "Why eight directions cannot fit",
+  "title_zh": "为什么八个方向装不进去？"
+}

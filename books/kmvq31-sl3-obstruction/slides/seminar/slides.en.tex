@@ -1,0 +1,121 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{Special linear obstructions\\for evolution algebras}
+\author{Haobo Ma\inst{1} \and Wenlin Zhang\inst{1,2}}
+\institute{\inst{1}Chrono AI, Singapore\and\inst{2}National University of Singapore, Singapore}
+\date{Version 2, 2026}
+\begin{document}
+% Manuscript: Title and author metadata
+\begin{frame}\titlepage\note{This talk follows paper version 2 and retains the recorded author names.}\end{frame}
+% Manuscript: Sections 1--4
+\begin{frame}{Route}\tableofcontents\note{Start with multiplication and infinitesimal symmetries, then classification and obstruction; technical consequences are in the appendix.}\end{frame}
+\section[Question]{The question and tiny symmetries}
+% Manuscript: Section 1; Corollaries 6 and 7
+\begin{frame}{A multiplication table}
+\[u^2=e^2=u,\qquad ue=0.\]\[(au+be)(cu+de)=(ac+bd)u.\]\begin{itemize}\item Distinct basis vectors multiply to zero: a natural basis.\item No associativity: $(ue)e=0$, but $u(e^2)=u$.\item Which invertible coordinate changes preserve every product?\end{itemize}
+\note{Ask the audience to check that $e\mapsto-e$ preserves multiplication. An arbitrary rotation need not preserve the square-image line and its idempotent. An evolution algebra has a bilinear product and admits some natural basis.}
+\end{frame}
+% Manuscript: Section 1; survey Question 31
+\begin{frame}{The target is the full symmetry group}
+\begin{block}{Question 31}Can \textbf{every} algebraic group be the \textbf{full} automorphism group of a finite-dimensional evolution algebra?\end{block}\begin{itemize}\item Survey of Kaygorodov--Mart\'{i}n Gonz\'{a}lez--Viruel.\item Question attributed to Costoya and Viruel.\item Abstract groups, algebraic groups and group schemes are separate versions.\end{itemize}
+\note{The original locator is survey \S2.2.5, p.24. Realizing a subgroup is insufficient. Start over the complex numbers with full automorphisms retaining geometric structure.}
+\end{frame}
+% Manuscript: Section 3, proof of Theorem 1
+\begin{frame}{Substitute a tiny change into multiplication}
+\[I+\epsilon D,\qquad \epsilon^2=0.\]\[(I+\epsilon D)(xy)=((I+\epsilon D)x)((I+\epsilon D)y).\]\begin{block}{Compare first-order terms}\[D(xy)=D(x)y+xD(y).\]\end{block}Derivations: $\operatorname{Der}(A)$; bracket: $[D,E]=DE-ED$.
+\note{This is exact algebra, not an approximation estimate: $\epsilon^2$ is literally zero in the dual numbers. The coefficient identity defines derivations. Credit Elduque--Labra for the group-scheme tangent viewpoint.}
+\end{frame}
+% Manuscript: Section 3, proof of Theorem 1
+\begin{frame}{Eight directions for $\mathrm{SL}_3$}
+\[\det(I+\epsilon X)=1+\epsilon\operatorname{tr}X.\]\[\mathfrak{sl}_3=\{X\in M_3(\mathbb C):\operatorname{tr}X=0\}.\]\begin{center}Nine coordinates, one independent linear equation:\[\dim\mathfrak{sl}_3=8.\]\end{center}
+\note{Define $\mathrm{SL}_3$ as determinant-one matrices and distinguish the group from its lower-case Lie algebra. Simplicity makes the classification applicable; the reading gives the matrix-unit proof.}
+\end{frame}
+\section[Orthogonal blocks]{Orthogonal structure}
+% Manuscript: Lemma 3
+\begin{frame}{Square directions control derivations}
+\[D(e_j)=\sum_i d_{ij}e_i.\]\[0=D(e_ie_j)=d_{ji}e_j^2+d_{ij}e_i^2\quad(i\ne j).\]\begin{itemize}\item Different square lines: both coefficients vanish.\item Equal normalized squares: $d_{ji}=-d_{ij}$.\item Semisimplicity then removes diagonal scalar terms.\end{itemize}
+\note{First remove zero squares with the annihilator lemma. Algebraic closure permits square roots so squares agree within each class. These classes give invariant blocks. Semisimplicity gives perfectness and zero trace on each block representation.}
+\end{frame}
+% Manuscript: Lemmas 3 and 4
+\begin{frame}{Why orthogonal geometry appears}
+\[b(Xv,w)+b(v,Xw)=0.\]\[b(v,w)=v^tw\quad\Longrightarrow\quad X^t=-X.\]\[\dim\mathfrak{so}_m=\binom m2=\frac{m(m-1)}2.\]\begin{block}{Structural steps}Square blocks $\to$ pointwise stabilizers $\to$ vanishing nilpotent kernels.\end{block}
+\note{A skew matrix has zero diagonal; the upper triangle determines the lower triangle. A possibly degenerate subspace cannot simply be split off orthogonally. The stabilizer proof separates its radical and obtains a nilpotent kernel.}
+\end{frame}
+% Manuscript: Theorem 5
+\begin{frame}{The semisimple classification}
+\begin{bookresult}{classification}Let $k$ be algebraically closed of characteristic zero and $A$ a finite-dimensional evolution algebra. If $\operatorname{Der}(A)$ is semisimple, then\[\operatorname{Der}(A)\cong\bigoplus_{a=1}^{s}\mathfrak{so}_{m_a}(k),\quad m_a\ge3.\]The case $s=0$ is allowed.\end{bookresult}
+\note{This proves survey Conjecture 5. Semisimple means no nonzero solvable ideals; simple means nonabelian with no nontrivial ideals. The algebra $\mathfrak{so}_4$ is semisimple but not simple. The public Lean declaration exactly matches necessity, not the converse.}
+\end{frame}
+% Manuscript: Section 3, proof of Theorem 1
+\begin{frame}{Eight is not a sum of threes and sixes}
+\begin{center}\begin{tabular}{c|ccc}$m$&3&4&5\\\hline$\dim\mathfrak{so}_m$&3&6&10\end{tabular}\end{center}\begin{itemize}\item Every nonzero block in dimension eight has size at most eight.\item Only dimensions three or six remain.\item $3a+6b\ne8$ for all $a,b\in\mathbb Z_{\ge0}$.\end{itemize}\[\operatorname{Der}(A)\not\cong\mathfrak{sl}_3(\mathbb C).\]
+\note{This is a divisibility argument, not a test of a few decompositions. For $m\ge5$ the dimension is at least ten and increases. Zero blocks do not affect the sum.}
+\end{frame}
+\section[Full groups]{Group obstructions and realizations}
+% Manuscript: Theorem 1 and its proof
+\begin{frame}{Return to the full automorphism group}
+\begin{bookresult}{sl3-obstruction}For every finite-dimensional complex evolution algebra,\[\operatorname{Der}(A)\not\cong\mathfrak{sl}_3(\mathbb C),\qquad\mathbf{Aut}(A)\not\cong\mathrm{SL}_3.\]Its full automorphism algebraic group is not $\mathrm{SL}_3$ either.\end{bookresult}\begin{itemize}\item No restriction on $A^2$ or $\operatorname{Ann}(A)$.\item Natural functor isomorphisms induce tangent Lie isomorphisms.\item Characteristic-zero smoothness handles algebraic groups.\end{itemize}
+\note{Over $k[s,t]/(s^2,t^2)$ the tangent commutator is $I+st[D,E]$, recovering the bracket, not only a vector-space isomorphism. Abstract group isomorphisms need not retain this structure.}
+\end{frame}
+% Manuscript: Corollary 6
+\begin{frame}{The allowed blocks really occur}
+\begin{bookresult}{orthogonal-realization}In characteristic different from two, let $b$ be nondegenerate symmetric:\[E(b)=ku\oplus V,\quad u^2=u,\ uV=0,\ vw=b(v,w)u.\]\[\mathbf{Aut}(E(b))\cong O(b),\qquad\operatorname{Der}(E(b))\cong\mathfrak{so}(V,b).\]\end{bookresult}Over an algebraically closed characteristic-zero field, finite direct sums realize every allowed semisimple derivation algebra, including zero.
+\note{Credit the construction in survey Proposition 14 and Remark 15. Over every coefficient algebra, the square space is $Ru$; an automorphism must fix the idempotent $u$ and restrict to an isometry on $V$. The argument commutes with base change.}
+\end{frame}
+% Manuscript: Corollary 9
+\begin{frame}{The special linear family: two Lie exceptions}
+\begin{bookresult}{special-linear}Over an algebraically closed field of characteristic zero, let $n\ge2$ and let $A$ range over finite-dimensional evolution algebras:\[\bigl(\exists A:\operatorname{Der}(A)\cong\mathfrak{sl}_n\bigr)\quad\Longleftrightarrow\quad n\in\{2,4\}.\]Over $\mathbb C$, full groups $\mathrm{SL}_n$ are impossible for $n=3$ or $n\ge5$.\end{bookresult}\[\mathfrak{sl}_2\cong\mathfrak{so}_3,\qquad\mathfrak{sl}_4\cong\mathfrak{so}_6.\]This does not positively realize the full groups $\mathrm{SL}_2,\mathrm{SL}_4$.
+\note{Simplicity permits one simple orthogonal factor. Compare rank $n-1=\lfloor m/2\rfloor$ and dimension $n^2-1=m(m-1)/2$. Odd $m$ gives $n=2$; even $m$ gives $n=4$.}
+\end{frame}
+\section[Sources]{Boundaries and sources}
+% Manuscript: Coverage and verification
+\begin{frame}{Boundaries of the conclusions}
+\begin{itemize}\item Question 31: universal algebraic-group and group-scheme realization fails; abstract groups are outside the result.\item Question 36: exactly the semisimple clause; not the solvable or nilpotent clauses.\item Question 14: a minimal-dimensional existence example, not a classification.\item Question 37: characteristic-zero smoothness only.\item Positive characteristic and full $\mathrm{SL}_2,\mathrm{SL}_4$ remain outside the conclusions.\end{itemize}
+\note{These numbers refer to the original survey, not generated book numbering. Excluding a simple ideal does not exclude subalgebras or faithful actions; the appendix gives explicit witnesses.}
+\end{frame}
+% Manuscript: Coverage and verification; Formal declarations
+\begin{frame}{Sources and formal evidence}
+\begin{itemize}\item Paper version 2: \href{https://doi.org/10.5281/zenodo.23957573}{10.5281/zenodo.23957573}.\item Classification: exact public Lean statement.\item $\mathrm{SL}_3$: the public main statement refutes universal functor realization.\item Natural bases: finite group and infinite basis quotient; not exact cardinality or minimality.\item Other complete conclusions retain written proofs and focused contribution requests.\end{itemize}
+\note{Distinguish mathematical authorship from formalization contributions. Finite sample calculations do not prove unbounded results. The reading sources chapter links exact source files and contribution requests; the appendix ledger supplies evidence links.}
+\end{frame}
+\appendix
+\section{Technical complements}
+% Manuscript: Lemma 2
+\begin{frame}{Removing the annihilator}
+{\small $k$ algebraically closed, $\operatorname{char}k=0$; $A$ a finite-dimensional evolution algebra. Put $L=\operatorname{Der}(A)$, $Z=\operatorname{Ann}(A)$.}
+\begin{bookresult}{annihilator}$\operatorname{Der}(A)$ semisimple $\Longrightarrow\operatorname{Ann}(A)=0$.\end{bookresult}\[J=\operatorname{Hom}(A/A^2,\operatorname{Ann}(A)).\]\begin{itemize}\item If $Z\subseteq A^2$, then $J^2=0$.\item Otherwise construct a rank-one derivation with trace one on $Z$.\item A zero natural square forces $A^2\ne A$.\end{itemize}
+\note{The space $J$ is an ideal of derivations. Semisimplicity excludes a nonzero solvable ideal; perfectness excludes nonzero represented trace. The public nonzero-square lemma can be composed into this source statement.}
+\end{frame}
+% Manuscript: Lemmas 3 and 4
+\begin{frame}{The exact pointwise stabilizers}
+\begin{bookresult}{square-blocks}\[L\cong\bigoplus_a\{X\in\mathfrak{so}(V_a,b_a):XW_a=0\}.\]\end{bookresult}\[W_a=\operatorname{span}\{\pi_a(w_b):b\}.\]\begin{bookresult}{stabilizer}A semisimple pointwise stabilizer is isomorphic to some $\mathfrak{so}_m$, $m\ge0$.\end{bookresult}
+\note{The field is still algebraically closed of characteristic zero. Here $w_b$ are normalized square representatives and $\pi_a$ are block projections. Preserving $W_a$ is weaker than annihilating it pointwise; the latter is required.}
+\end{frame}
+% Manuscript: Lemma 4
+\begin{frame}{Why the stabilizer kernel vanishes}
+\[U=R\oplus H\oplus R^{\prime},\qquad R=W\cap W^\perp.\]\[X=\begin{pmatrix}0&-P^tB&C\\0&T&P\\0&0&0\end{pmatrix},\quad T^tB+BT=0,\ C^t=-C.\]\[X\longmapsto T,\quad N=\ker(X\mapsto T),\quad[N,[N,N]]=0.\]Semisimplicity forces $N=0$; diagonalize $b|_H$ to obtain the standard orthogonal form.
+\note{First split off a nondegenerate complement $W_0$ in $W$; construct the paired isotropic spaces $R,R^{\prime}$ in its perpendicular complement. Projection is surjective because every $T$ extends by zero. A kernel bracket has only the central $C$ block.}
+\end{frame}
+% Manuscript: Corollary 8
+\begin{frame}{Without semisimplicity of the whole algebra}
+\begin{bookresult}{semisimple-quotient}If $\operatorname{Ann}(A)=0$, then\[L/\operatorname{rad}L\cong\bigoplus_a\mathfrak{so}_{m_a},\qquad m_a\ge3.\]Every simple ideal is orthogonal; neither $\mathfrak{sl}_3$ nor $\mathfrak g_2$ occurs.\end{bookresult}\[\lambda_a(D)=\frac{\operatorname{tr}(D|_{V_a})}{\dim V_a},\qquad K=\ker\lambda.\]
+\note{There is no restriction on $\dim A^2$. The quotient $L/K$ is abelian, while $K/\operatorname{rad}K$ is orthogonal. Use $\operatorname{rad}K=K\cap\operatorname{rad}L$; the remaining quotient is both abelian and semisimple, hence zero.}
+\end{frame}
+% Manuscript: Corollary 7
+\begin{frame}{A finite group does not bound natural basis classes}
+\begin{bookresult}{natural-bases}There exists a two-dimensional complex evolution algebra with zero annihilator, exactly two automorphisms and infinitely many natural basis classes modulo permutation and independent scaling. Two is minimal.\end{bookresult}\[u^2=e^2=u,\ ue=0;\qquad (u+te,-tu+e),\ t\in\mathbb Z_{>0}.\]\begin{itemize}\item Mixed product zero; determinant $1+t^2\ne0$.\item No swap forces $t=s$; a swap forces $ts=-1$.\end{itemize}
+\note{The group $O_1(\mathbb C)$ and this algebra have earlier sources, credited in the reading. In dimensions zero and one every basis differs only by scaling, proving minimality. Testing finitely many parameters cannot establish infinitude.}
+\end{frame}
+% Manuscript: Corollary 10
+\begin{frame}{Subalgebras are not ideals}
+\begin{bookresult}{ideals-actions}The annihilator hypothesis is essential; excluding a simple ideal does not exclude a faithful $\mathfrak{sl}_3$ derivation action.\end{bookresult}\begin{itemize}\item Zero multiplication on $k^3$: $\operatorname{Der}(A)=\mathfrak{gl}_3$.\item $V=k^3\oplus(k^3)^*$, $b((v,f),(w,g))=f(w)+g(v)$.\item $X\mapsto\operatorname{diag}(X,-X^t)$ embeds in $\mathfrak{so}_6$.\item $A=E(b)\oplus k$: $\operatorname{Ann}(A)=0$, $\dim A^2=2$.\end{itemize}
+\note{Retain the algebraically closed characteristic-zero setting. The final $k$ summand is one-dimensional idempotent multiplication and has zero derivations. Simplicity of $\mathfrak{so}_6$ makes the proper embedded subalgebra a nonideal.}
+\end{frame}
+% Manuscript: Corollary 11
+\begin{frame}{Cartier smoothness}
+\begin{bookresult}{smoothness}For every finite-dimensional algebra over any characteristic-zero field, the full automorphism group scheme is smooth.\end{bookresult}\begin{itemize}\item Multiplication equations define a closed subgroup scheme of $\mathrm{GL}(A)$.\item It has finite type; apply Cartier\textquotesingle s theorem.\item No evolution basis or algebraic closure is needed.\end{itemize}
+\note{This applies prior theory: Milne, Algebraic Groups, Theorem 3.23 and Corollary 11.31(a). It does not address positive characteristic, connected components or exponential generation.}
+\end{frame}
+% Manuscript: Formal declarations (source-linked ledger)
+\FormalVerification
+\end{document}

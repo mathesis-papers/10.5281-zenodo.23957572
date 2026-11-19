@@ -1,0 +1,132 @@
+{
+  "book": "kmvq31-sl3-obstruction",
+  "pending_claims": [],
+  "results": {
+    "sl3-obstruction": {
+      "claim": "collected:kmvq31-sl3-obstruction:2:s1",
+      "gids": [],
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/EvolutionAlgebras/AlgebraicGroupRealizationRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Theorem 1 — Complete SL3 derivation and full-group obstruction",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/101"
+      }
+    },
+    "annihilator": {
+      "claim": "collected:kmvq31-sl3-obstruction:2:s2",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/QuadraticForms/EvolutionAlgebras/DerivationAnnihilatorObstruction.Annihilator.semisimple_natural_squares_ne_zero",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Lemma 2 — Semisimplicity forces zero annihilator",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/102"
+      }
+    },
+    "square-blocks": {
+      "claim": "collected:kmvq31-sl3-obstruction:2:s3",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/QuadraticForms/EvolutionAlgebras/NondegenerateDerivationBlocks.Blocks.nonzero_square_block_decomposition",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Lemma 3 — Orthogonal pointwise-stabilizer decomposition",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/103"
+      }
+    },
+    "stabilizer": {
+      "claim": "collected:kmvq31-sl3-obstruction:2:s4",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/QuadraticForms/OrthogonalPointwiseStabilizers.Stabilizer.stabilizer_equiv_of_trivialRadical",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Lemma 4 — Semisimple pointwise stabilizers are orthogonal",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/104"
+      }
+    },
+    "classification": {
+      "claim": "collected:kmvq31-sl3-obstruction:2:s5",
+      "gids": [
+        "D5/S3/QuadraticForms/EvolutionAlgebras/SemisimpleDerivationClassification.result"
+      ],
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/QuadraticForms/EvolutionAlgebras/SemisimpleDerivationClassification.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8"
+    },
+    "orthogonal-realization": {
+      "claim": "collected:kmvq31-sl3-obstruction:2:s6",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Corollary 6 — Orthogonal realization by evolution algebras",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/105"
+      }
+    },
+    "natural-bases": {
+      "claim": "collected:kmvq31-sl3-obstruction:2:s7",
+      "gids": [],
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/EvolutionAlgebras/FiniteAutomorphismsInfiniteNaturalBases.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Corollary 7 — Two automorphisms and infinitely many natural basis classes",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/106"
+      }
+    },
+    "semisimple-quotient": {
+      "claim": "collected:kmvq31-sl3-obstruction:2:s8",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Corollary 8 — Orthogonal semisimple quotient and simple ideals",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/107"
+      }
+    },
+    "special-linear": {
+      "claim": "collected:kmvq31-sl3-obstruction:2:s9",
+      "gids": [],
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/EvolutionAlgebras/AlgebraicGroupRealizationRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Corollary 9 — Special linear realization obstruction and two Lie exceptions",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/108"
+      }
+    },
+    "ideals-actions": {
+      "claim": "collected:kmvq31-sl3-obstruction:2:s10",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Corollary 10 — Annihilator necessity and faithful SL3 Lie actions",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/109"
+      }
+    },
+    "smoothness": {
+      "claim": "collected:kmvq31-sl3-obstruction:2:s11",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Corollary 11 — Characteristic-zero smoothness of algebra automorphism schemes",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/110"
+      }
+    }
+  },
+  "stage": "complete",
+  "titles": {
+    "en": "A negative answer to Question 31 (section 2.2.5, page 24, arXiv:2610.22248v1): special linear obstructions for evolution algebras",
+    "zh": "A negative answer to Question 31 (section 2.2.5, page 24, arXiv:2610.22248v1): special linear obstructions for evolution algebras"
+  },
+  "version": 2,
+  "work": "kmvq31-sl3-obstruction"
+}
