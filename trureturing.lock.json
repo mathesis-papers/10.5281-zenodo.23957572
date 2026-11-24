@@ -2,14 +2,14 @@
   "schema": "trureturing-books.lock.v1",
   "repo": "the-omega-institute/trureturing",
   "branch": "dev",
-  "commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
-  "pinned_at": "2026-11-08T12:32:04Z",
+  "commit": "b05ceb497bd134559c3c0f84d925c1643f7c65cb",
+  "pinned_at": "2026-11-24T06:47:09Z",
   "declarations": {
     "D5/S3/QuadraticForms/EvolutionAlgebras/SemisimpleDerivationClassification.result": {
       "module": "D5/S3/QuadraticForms/EvolutionAlgebras/SemisimpleDerivationClassification",
       "name": "D5.S3.QuadraticForms.EvolutionAlgebras.SemisimpleDerivationClassification.result",
       "kind": "theorem",
-      "statement_id": "sha256:f4cc910c1d3b08cd4e022ae4cfe95ff77c0c4c8b81a22f61b06e04da45e844e8",
+      "statement_id": "sha256:15816ea4e93cefbdf5affc769fb45f13441e0f285a1220752a008c81d279f8d5",
       "line": 277,
       "signature": "theorem result : claim"
     }
